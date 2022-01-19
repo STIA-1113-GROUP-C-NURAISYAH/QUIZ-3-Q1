@@ -1,0 +1,91 @@
+package quiz3;
+import java.util.Scanner;
+public class Question1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner (System.in);
+		System.out.print ("Enter size of array: ");
+		int n=sc.nextInt();
+		int [] num=new int [n];
+		
+		int option;
+		do
+		{
+			
+            System.out.println("1. Accept elements of array");
+            System.out.println("2. Display elements of array");
+            System.out.println("3. Search the element within array");
+            System.out.println("4. Sort array");
+            System.out.print("Select an Option : ");
+            option = sc.nextInt();
+           
+           switch(option)
+           {
+           case 1:
+        	   readElements(num);
+        	   break;
+           case 2:
+        	   displayElements(num);
+        	   break;
+           case 3:
+           		System.out.println ("Enter the number you want to search");
+           		int searchNum=sc.nextInt();
+           		int i=searchElements(num,searchNum);
+           
+           		
+           		if (i==-1) {
+           			System.out.println ("The number is not in array.");
+           		}
+           		else {
+           			System.out.println ("The number you want to search is at " + (i+1));
+           		}
+           		break;
+           case 4:
+        	   System.out.println("Sorted array:");
+               sortElements(num);
+               displayElements(num);
+               break;		
+           }
+		}
+           while (option!=6);
+	}
+		public static void readElements(int[]num) {
+			for (int j=0; j<num.length; j++)
+			{
+				Scanner sc=new Scanner(System.in);
+				num[j]=sc.nextInt();			
+			}
+           
+		}
+		
+		public static void displayElements(int [] num) {
+			for (int j=0; j<num.length; j++) {
+				System.out.println(num[j] + " ");
+			}
+		}
+		
+		public static int searchElements(int[]num, int sN) {
+			for (int j=0; j<num.length; j++) {
+				if(num[j]==sN)
+				{
+					return j;
+				}
+			}
+			return -1;
+		}
+		
+		public static void sortElements(int[]num) {
+			for (int j=0; j<num.length -1; j++) {
+				for (int k=0; k<num.length -j-1; k++) {
+					if(num[j]<num[k+1]) {
+						int array=num[k];
+						num[k]=num[k+1];
+						num[k+1]=array;
+					}
+						
+				}
+			}
+		}
+	}
