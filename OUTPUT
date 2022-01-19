@@ -1,0 +1,29 @@
+Enter size of array: 3
+1. Accept elements of array
+2. Display elements of array
+3. Search the element within array
+4. Sort array
+Select an Option : 1
+432
+245
+343
+1. Accept elements of array
+2. Display elements of array
+3. Search the element within array
+4. Sort array
+Select an Option : 2
+432 
+245 
+343 
+1. Accept elements of array
+2. Display elements of array
+3. Search the element within array
+4. Sort array
+Select an Option : 3
+Enter the number you want to search
+432
+The number you want to search is at 1
+1. Accept elements of array
+2. Display elements of array
+3. Search the element within array
+4. Sort array
